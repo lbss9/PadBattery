@@ -24,7 +24,6 @@ static class PadIcon
     public static Icon Draw(int size, int? percent, bool charging, bool light)
     {
         var color = light ? Color.Black : Color.White;
-        if (percent == null) color = Color.FromArgb(110, color);
         float unit = size / 16f;
 
         using var bitmap = new Bitmap(size, size, PixelFormat.Format32bppArgb);
@@ -35,7 +34,7 @@ static class PadIcon
 
             int padHeight = (int)MathF.Round(size * SvgHeight / SvgWidth);
             var pad = new Rectangle(0, (size - padHeight) / 2 + 1, size, padHeight);
-            DrawGamepad(g, color, pad, Math.Max(1, MathF.Round(unit)), percent);
+            DrawGamepad(g, color, pad, 2 * unit, percent);
 
             if (charging) DrawBolt(g, color, size / 2f, pad.Y + padHeight * 0.42f, padHeight * 0.85f, unit);
         }
