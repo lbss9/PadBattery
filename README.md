@@ -21,6 +21,10 @@ Um clique no ícone abre um painel com cada controle conectado, a porcentagem e 
 
 Não precisa de driver nem de programa extra: tudo é lido direto pelas APIs do Windows.
 
+## Download
+
+Baixe o `.zip` da [última versão](https://github.com/lbss9/PadBattery/releases/latest), extraia em qualquer pasta e abra o `PadBattery.exe`.
+
 ## Uso
 
 - **Passar o mouse:** mostra o nome e a porcentagem de cada controle.
@@ -58,3 +62,7 @@ O executável fica em `bin\Release\net8.0-windows10.0.19041.0\win-x64\PadBattery
 ## Tecnologias
 
 C# · .NET 8 · WinUI 3 (Windows App SDK) · Windows.Gaming.Input · HID · XInput
+
+## Licença
+
+[MIT](LICENSE)
